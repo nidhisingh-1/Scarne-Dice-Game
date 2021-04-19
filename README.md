@@ -8,3 +8,6 @@ Scarne’s Dice is a turn-based dice game where players score points against the
   * Choose to either re-roll or keep their score and end their turn, in which case it will be computer's turn to do so.
   
   The winner is the first player that reaches (or exceeds) 100 points.
+ 
+| <img src = "Screenshots/dice(1).jpg" width=200> | <img src = "Screenshots/dice(2).jpg" width=200> | <img src = "Screenshots/dice(3).jpg" width=200>| <img src = "Screenshots/dice(4).jpg" width=200> |
+|---|---|---|---|
