@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             ys += value;
             yt = yt + value;
             tv_cs.setText("Computer's Score:" + cs);
-            tv_ts.setText("Your turn Score: " + ys);
+            tv_ts.setText("Your turn Score: " + yt);
             tv_ys.setText("Your Score: " + ys);
             tv_cts.setText("Computer's turn score: " + ct);
 
@@ -108,14 +108,16 @@ public class MainActivity extends AppCompatActivity {
     public void winner(){
         if(cs >= 100) {
             AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
-            adb.setMessage("Computer Won \n Press Reset to play again");
+            adb.setMessage("Press Reset to play again");
+            adb.setTitle("👾 Computer Won!");
             adb.show();
             rollbtn.setEnabled(false);
             holdbtn.setEnabled(false);
         }
             if(ys >= 100){
                 AlertDialog.Builder adbb = new AlertDialog.Builder(MainActivity.this);
-                adbb.setMessage("You Won \n Press Reset to play again");
+                adbb.setMessage("Press Reset to play again");
+                adbb.setTitle("😀 Yay! You won!");
                 adbb.show();
                 rollbtn.setEnabled(false);
                 holdbtn.setEnabled(false);
@@ -133,16 +135,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (value == 1) {
+            cs = cs - ct;
             tv_cs.setText("Computer's Score:" + cs);
             tv_ts.setText("Your turn Score: " + yt);
             tv_ys.setText("Your Score: " + ys);
             tv_cts.setText("Computer's turn score: " + cs);
         } else {
             cs += cs;
+            ct = ct + value;
             tv_cs.setText("Computer's Score: " + cs);
             tv_ts.setText("Your turn Score: " + yt);
             tv_ys.setText("Your Score: " + ys);
-            tv_cts.setText("Computer's turn score " + cs);
+            tv_cts.setText("Computer's turn score " + ct);
 
         }
         ct = 0;
