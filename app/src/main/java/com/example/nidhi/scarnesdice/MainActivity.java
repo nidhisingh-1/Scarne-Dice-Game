@@ -86,13 +86,14 @@ public class MainActivity extends AppCompatActivity {
     public void updateStatus(int value) {
         if (value != 1) {
             ys += value;
+            yt = yt + value;
             tv_cs.setText("Computer's Score:" + cs);
             tv_ts.setText("Your turn Score: " + ys);
             tv_ys.setText("Your Score: " + ys);
             tv_cts.setText("Computer's turn score: " + ct);
 
         } else {
-
+            ys = ys - yt;
             tv_cs.setText("Computer's Score:" + cs);
             tv_ts.setText("Your turn Score: " + 0);
             tv_ys.setText("Your Score: " + ys);
@@ -100,16 +101,18 @@ public class MainActivity extends AppCompatActivity {
             yt = 0;
             computerTurn();
         }
+
+        winner();
     }
 
     public void winner(){
-        if(cs >= 100){
+        if(cs >= 100) {
             AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
             adb.setMessage("Computer Won \n Press Reset to play again");
             adb.show();
             rollbtn.setEnabled(false);
             holdbtn.setEnabled(false);
-
+        }
             if(ys >= 100){
                 AlertDialog.Builder adbb = new AlertDialog.Builder(MainActivity.this);
                 adbb.setMessage("You Won \n Press Reset to play again");
@@ -117,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                 rollbtn.setEnabled(false);
                 holdbtn.setEnabled(false);
             }
-        }
+
     }
 
     public void computerTurn() {
