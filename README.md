@@ -9,5 +9,5 @@ Scarne’s Dice is a turn-based dice game where players score points against the
   
   The winner is the first player that reaches (or exceeds) 100 points.
  
-| <img src = "Screenshots/dice(1).jpg" width=200> | <img src = "Screenshots/dice(2).jpg" width=200> | <img src = "Screenshots/dice(3).jpg" width=200>| <img src = "Screenshots/dice(4).jpg" width=200> |
+| <img src = "Screenshots/Screenshot_20210420_015803.jpg" width=200> | <img src = "Screenshots/Screenshot_20210420_015819.jpg" width=200> | <img src = "Screenshots/Screenshot_20210420_020056.jpg" width=200>| <img src = "Screenshots/Screenshot_20210420_020745.jpg" width=200> |
 |---|---|---|---|
